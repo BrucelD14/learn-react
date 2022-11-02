@@ -1,12 +1,12 @@
 import "./App.css";
-import Welcome, { WelcomeH2, WelcomeH3 } from "./Welcome";
+import { WelcomeH2} from "./Welcome";
 
 function App() {
   return (
     <div className="App">
-      <Welcome />
-      <WelcomeH2 />
-      <WelcomeH3 />
+      <WelcomeH2 children="Welcome1" />
+      <WelcomeH2 children="Welcome2" />
+      <WelcomeH2>Saya content</WelcomeH2>
     </div>
   );
 }
