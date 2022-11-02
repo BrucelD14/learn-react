@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Welcome, { WelcomeH2, WelcomeH3 } from "./Welcome";
 
