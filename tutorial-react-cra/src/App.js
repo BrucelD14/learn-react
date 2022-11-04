@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <img src="/logo512.png" alt="images content" />
+      <h1>Halaman Home</h1>
     </div>
   );
 }
