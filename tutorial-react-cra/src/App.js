@@ -3,6 +3,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import AboutTeam from "./AboutTeam";
+import Blog from "./Blog";
+import BlogDetail from "./BlogDetail";
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
         <Route path="about" element={<About />}>
           <Route path="team" element={<AboutTeam />} />
         </Route>
+        <Route path="blog" element={<Blog />} />
+        <Route path="blog/:slug" element={<BlogDetail />} />
       </Routes>
     </div>
   );
