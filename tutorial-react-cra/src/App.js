@@ -6,6 +6,7 @@ import AboutTeam from "./AboutTeam";
 import Blog from "./Blog";
 import BlogDetail from "./BlogDetail";
 import NotFound from "./NotFound";
+import Login from "./Login";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         </Route>
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:slug" element={<BlogDetail />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
