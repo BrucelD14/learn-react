@@ -32,9 +32,9 @@ export default function Blog() {
                 <h3>
                   <Link to={`/blog/${article.id}`}>{article.title}</Link>
                 </h3>
-                <date>
+                <time>
                   {new Date(article.publishedAt).toLocaleDateString()}
-                </date>
+                </time>
               </article>
             );
           })}

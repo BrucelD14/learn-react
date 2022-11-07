@@ -26,11 +26,14 @@ export default function BlogDetail() {
     <section>
       {loading && <i>Loading article...</i>}
       <h2>{article.title}</h2>
-      <date>{new Date(article.publishedAt).toLocaleDateString()}</date>
+      <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
+      <br />
+      <br />
+      <img src={article.imageUrl} alt={article.title} width={800} />
       <p>{article.summary}</p>
       <p>
         Source:{" "}
-        <a href={article.url} target="_blank">
+        <a href={article.url} target="_blank" rel="noreferrer">
           {article.newsSite}
         </a>
       </p>
