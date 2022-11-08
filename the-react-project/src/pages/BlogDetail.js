@@ -14,13 +14,14 @@ export default function BlogDetail() {
           `https://api.spaceflightnewsapi.net/v3/articles/${params.id}`
         );
 
-        if(!request.ok) {
-            setLoading(false);
-            return setNotFound(true);
+        if (!request.ok) {
+          setLoading(false);
+          return setNotFound(true);
         }
 
         const response = await request.json();
 
+        document.title = response.title;
         setArticle(response);
         setLoading(false);
       }
@@ -29,8 +30,8 @@ export default function BlogDetail() {
     [params]
   );
 
-  if(notFound) {
-    return <h1>Artikel tidak ditemukan :(</h1>
+  if (notFound) {
+    return <h1>Artikel tidak ditemukan :(</h1>;
   }
 
   return (
@@ -40,8 +41,14 @@ export default function BlogDetail() {
       ) : (
         <article className="article">
           <h2 className="article-title">{article.title}</h2>
-          <time className="article-time">{new Date(article.publishedAt).toLocaleDateString()}</time>
-          <img src={article.imageUrl} alt={article.title} className="article-image" />
+          <time className="article-time">
+            {new Date(article.publishedAt).toLocaleDateString()}
+          </time>
+          <img
+            src={article.imageUrl}
+            alt={article.title}
+            className="article-image"
+          />
           <p className="article-summary">{article.summary}</p>
           <p className="article-source">
             Source:{" "}

@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 export default function Contact() {
+  useEffect(function () {
+    document.title = "CONTACT";
+  }, []);
   return (
     <section className="section">
       <h1 className="section-title">CONTACT</h1>
