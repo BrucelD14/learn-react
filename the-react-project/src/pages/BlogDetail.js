@@ -43,7 +43,7 @@ export default function BlogDetail() {
           <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
           <br />
           <br />
-          <img src={article.imageUrl} alt={article.title} width={700} />
+          <img src={article.imageUrl} alt={article.title} width={'95%'} />
           <p>{article.summary}</p>
           <p>
             Source:{" "}
