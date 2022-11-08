@@ -1,9 +1,15 @@
 .App {
-  width: 315px;
+  width: 415px;
   margin: 0 auto;
   background-color: white;
   border: 1px solid #eee;
   min-height: 100vh;
+}
+
+@media (max-width: 415px) {
+  .App {
+    width: 100%;
+  }
 }
 
 .brand {
@@ -21,7 +27,7 @@
 
 .nav-item {
   display: inline-block;
-  flex: 1 auto;
+  flex: 1 1 0;
   text-align: center;
   padding: 14px 0;
   color: #000;
