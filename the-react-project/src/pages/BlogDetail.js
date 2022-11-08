@@ -34,18 +34,16 @@ export default function BlogDetail() {
   }
 
   return (
-    <section>
+    <section className="section">
       {loading ? (
         <i>Loading article...</i>
       ) : (
-        <article>
-          <h2>{article.title}</h2>
-          <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
-          <br />
-          <br />
-          <img src={article.imageUrl} alt={article.title} width={'95%'} />
-          <p>{article.summary}</p>
-          <p>
+        <article className="article">
+          <h2 className="article-title">{article.title}</h2>
+          <time className="article-time">{new Date(article.publishedAt).toLocaleDateString()}</time>
+          <img src={article.imageUrl} alt={article.title} className="article-image" />
+          <p className="article-summary">{article.summary}</p>
+          <p className="article-source">
             Source:{" "}
             <a href={article.url} target="_blank" rel="noreferrer">
               {article.newsSite}
